@@ -3,7 +3,6 @@ AFRAME.registerComponent("videohandler", {
   init: function () {
     var elem = document.documentElement;
     var marker = document.querySelector("#marker");
-    var fullbutton = document.querySelector("#fullscreen");
     var Video_0 = document.querySelector("#Video_Asset_0");
     var button = document.querySelector("#mutebutton");
     button.hidden = true;
@@ -13,7 +12,7 @@ AFRAME.registerComponent("videohandler", {
       markerFound = 1;
       button.hidden = false;
       Video_0.muted = false;
-      Video_0.play(); //if video should start immediently on marker detection
+      Video_0.play(); 
     });
 
     marker.addEventListener("markerLost", function (evt) {
